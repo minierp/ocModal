@@ -278,7 +278,7 @@
 				$scope.$watch('modalTemplate', function(newVal, oldVal) {
 					if(typeof newVal !== 'undefined') {
 						if(!$templateWrapper) {
-							$templateWrapper = angular.element($element.children()[1]);
+							$templateWrapper = angular.element($element.children()[0]);
 						}
 						$templateWrapper.append($compile(newVal)($scope));
 						$scope.$emit('$includeContentLoaded');
